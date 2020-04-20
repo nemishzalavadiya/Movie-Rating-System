@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MovieSystem" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/MovieRatingSystem/MovieSystem/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/MovieRatingSystem/MovieSystem/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/MovieRatingSystem/MovieSystem/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MovieRatingSystem.Model" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/MovieRatingSystem/MovieSystem/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMovieSystem_AddMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMovie" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_AddMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_UpdateMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMovie" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_UpdateMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_DeleteMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMovie" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_DeleteMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowMovie" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowUser" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_Verify_User_InputMessage">
+    <wsdl:part name="parameters" element="tns:Verify_User" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_Verify_User_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Verify_UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_AddRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRating" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_AddRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_DeleteRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRating" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_DeleteRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_UpdateRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRating" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_UpdateRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRating" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowRating_short_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRating_short" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowRating_short_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRating_shortResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowRating_Persional_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRating_Persional" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowRating_Persional_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRating_PersionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowRating_Log_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRating_Log" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_ShowRating_Log_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowRating_LogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_getMovie_Name_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMovie_Name" />
+  </wsdl:message>
+  <wsdl:message name="IMovieSystem_getMovie_Name_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMovie_NameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMovieSystem">
+    <wsdl:operation name="AddMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/AddMovie" message="tns:IMovieSystem_AddMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/AddMovieResponse" message="tns:IMovieSystem_AddMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/UpdateMovie" message="tns:IMovieSystem_UpdateMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/UpdateMovieResponse" message="tns:IMovieSystem_UpdateMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/DeleteMovie" message="tns:IMovieSystem_DeleteMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/DeleteMovieResponse" message="tns:IMovieSystem_DeleteMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowMovie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/ShowMovie" message="tns:IMovieSystem_ShowMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/ShowMovieResponse" message="tns:IMovieSystem_ShowMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/AddUser" message="tns:IMovieSystem_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/AddUserResponse" message="tns:IMovieSystem_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/DeleteUser" message="tns:IMovieSystem_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/DeleteUserResponse" message="tns:IMovieSystem_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/UpdateUser" message="tns:IMovieSystem_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/UpdateUserResponse" message="tns:IMovieSystem_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/ShowUser" message="tns:IMovieSystem_ShowUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/ShowUserResponse" message="tns:IMovieSystem_ShowUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Verify_User">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/Verify_User" message="tns:IMovieSystem_Verify_User_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/Verify_UserResponse" message="tns:IMovieSystem_Verify_User_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/AddRating" message="tns:IMovieSystem_AddRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/AddRatingResponse" message="tns:IMovieSystem_AddRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/DeleteRating" message="tns:IMovieSystem_DeleteRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/DeleteRatingResponse" message="tns:IMovieSystem_DeleteRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/UpdateRating" message="tns:IMovieSystem_UpdateRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/UpdateRatingResponse" message="tns:IMovieSystem_UpdateRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/ShowRating" message="tns:IMovieSystem_ShowRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/ShowRatingResponse" message="tns:IMovieSystem_ShowRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowRating_short">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/ShowRating_short" message="tns:IMovieSystem_ShowRating_short_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/ShowRating_shortResponse" message="tns:IMovieSystem_ShowRating_short_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowRating_Persional">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/ShowRating_Persional" message="tns:IMovieSystem_ShowRating_Persional_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/ShowRating_PersionalResponse" message="tns:IMovieSystem_ShowRating_Persional_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowRating_Log">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/ShowRating_Log" message="tns:IMovieSystem_ShowRating_Log_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/ShowRating_LogResponse" message="tns:IMovieSystem_ShowRating_Log_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMovie_Name">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMovieSystem/getMovie_Name" message="tns:IMovieSystem_getMovie_Name_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMovieSystem/getMovie_NameResponse" message="tns:IMovieSystem_getMovie_Name_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMovieSystem" type="tns:IMovieSystem">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddMovie">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/AddMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovie">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/UpdateMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMovie">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/DeleteMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowMovie">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/ShowMovie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowUser">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/ShowUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verify_User">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/Verify_User" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRating">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/AddRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRating">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/DeleteRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRating">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/UpdateRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowRating">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/ShowRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowRating_short">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/ShowRating_short" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowRating_Persional">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/ShowRating_Persional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowRating_Log">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/ShowRating_Log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMovie_Name">
+      <soap:operation soapAction="http://tempuri.org/IMovieSystem/getMovie_Name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MovieSystem">
+    <wsdl:port name="BasicHttpBinding_IMovieSystem" binding="tns:BasicHttpBinding_IMovieSystem">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/MovieRatingSystem/MovieSystem/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

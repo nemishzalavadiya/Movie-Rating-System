@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MovieRatingSystem.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MovieRatingSystem.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Movie">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Movie_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Movie_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Movie_Rating" type="xs:double" />
+      <xs:element minOccurs="0" name="Movie_Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Movie" nillable="true" type="tns:Movie" />
+  <xs:complexType name="ArrayOfMovie">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Movie" nillable="true" type="tns:Movie" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMovie" nillable="true" type="tns:ArrayOfMovie" />
+  <xs:complexType name="SystemUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="User_Designation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemUser" nillable="true" type="tns:SystemUser" />
+  <xs:complexType name="ArrayOfSystemUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SystemUser" nillable="true" type="tns:SystemUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSystemUser" nillable="true" type="tns:ArrayOfSystemUser" />
+  <xs:complexType name="User_Rating">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MovieName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemUser" nillable="true" type="tns:SystemUser" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="User_Provided_Rating" type="xs:double" />
+      <xs:element minOccurs="0" name="User_Rarting_Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User_Rating" nillable="true" type="tns:User_Rating" />
+  <xs:complexType name="RatinDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MovieName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="User_Provided_Rating" type="xs:double" />
+      <xs:element minOccurs="0" name="User_Rarting_Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RatinDto" nillable="true" type="tns:RatinDto" />
+  <xs:complexType name="ArrayOfRatinDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RatinDto" nillable="true" type="tns:RatinDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRatinDto" nillable="true" type="tns:ArrayOfRatinDto" />
+  <xs:complexType name="ArrayOfRatinDto2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RatinDto2" nillable="true" type="tns:RatinDto2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRatinDto2" nillable="true" type="tns:ArrayOfRatinDto2" />
+  <xs:complexType name="RatinDto2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MovieName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Provided_Rating" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RatinDto2" nillable="true" type="tns:RatinDto2" />
+  <xs:complexType name="ArrayOfRatinDto3">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RatinDto3" nillable="true" type="tns:RatinDto3" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRatinDto3" nillable="true" type="tns:ArrayOfRatinDto3" />
+  <xs:complexType name="RatinDto3">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MovieName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Provided_Rating" type="xs:double" />
+      <xs:element minOccurs="0" name="User_Rarting_Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RatinDto3" nillable="true" type="tns:RatinDto3" />
+</xs:schema>
